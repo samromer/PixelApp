@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+}
+
+:root {
+    --mdc-theme-primary: #14A989;
+}
+
+.mdc-image-list--masonry {
+    column-count: 2;
+}
+
+.mdc-top-app-bar__title {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.liked {}
+
+#sheetTitle,
+#sheetDescription,
+#userData,
+#sheetContent,
+.txtCenter {
+    text-align: center;
+}
+
+.searchBar {
+    height: 40%;
+    max-width: 20px;
+}
+
+.menuImg {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.post {
+    border: solid 2px lightgrey;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.sheet {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    margin-left: 0;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+
+.sheet-out-of-view {
+    margin-left: -100%;
+}
+
+.sheet main {
+    /* min-height: calc(100vh - 56px - 48px); */
+    position: relative;
+    min-height: 100vh;
+    top: 56px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sheet img {
+    width: 80%;
+    height: auto;
+    max-height: 500px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--mdc-theme-primary);
+}
+
+.noScroll {
+    height: 100%;
+	overflow-y: hidden;
+}

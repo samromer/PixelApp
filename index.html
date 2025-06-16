@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelApp</title>
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Material.io bestanden (JS en registratie componenten) -->
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script async src="app.js"></script>
+  <meta name="discription" content="PixelApp">
+  <meta name="msapplication-TileColor" content="#14A989">
+  <meta name="theme-color" content="#14A989">
+  <meta rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="manifest" href="manifest.json" />
+  <script>
+    window.addEventListener('load', () => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+    }
+    });
+  </script>
+</head>
+
+<body>
+  <!-- head -->
+  <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+          aria-label="Open navigation menu" id="drawerOpen">menu</button>
+        <span class="mdc-top-app-bar__title" id="pageTitle">Home</span>
+
+        <div class="searchBar hidden">
+          <input type="text" placeholder="Search" aria-label="Label" id="search">
+        </div>
+
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+        <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite"
+          id="likedPage">favorite</button>
+        <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Home"
+          id="homeButton">home</button>
+        <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search"
+          id="searchPage">search</button>
+      </section>
+    </div>
+  </header>
+
+  <!-- menu -->
+  <aside class="mdc-drawer mdc-drawer--modal">
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list" id="drawerClose">
+        <img class="menuImg" src="images/PixelLogo.png" alt="logo">
+        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" tabindex="0" id="homeButton">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+          <span class="mdc-list-item__text">Home</span>
+        </a>
+        <a class="mdc-list-item" href="#" id="likedPage">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">favorite</i>
+          <span class="mdc-list-item__text">Liked</span>
+        </a>
+        <a class="mdc-list-item" href="#" id="searchPage">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">search</i>
+          <span class="mdc-list-item__text">Search</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+  <div class="mdc-drawer-scrim"></div>
+  <main class="mdc-top-app-bar--fixed-adjust">
+    <div class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+          <div class="mdc-tab-scroller__scroll-content">
+            <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0" id="artTab">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">ART</span>
+              </span>
+              <span class="mdc-tab-indicator" id="artUnderline">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+            <button class="mdc-tab" role="tab" aria-selected="true" tabindex="1" id="blogTab">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">BLOGS</span>
+              </span>
+              <span class="mdc-tab-indicator" id="blogUnderline">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+              <span class="mdc-tab-indicator mdc-tab-indicator--active">
+            </button>
+            <button class="mdc-tab" role="tab" aria-selected="true" tabindex="2" id="trickTab">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">TRICKS</span>
+              </span>
+              <span class="mdc-tab-indicator" id="trickUnderline">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- content -->
+    <div class="content" id="content">
+    </div>
+  </main>
+
+  <!-- sheet -->
+  <section class="sheet sheet-out-of-view">
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+            aria-label="Open navigation menu" id="sheetClose">close</button>
+          <span class="mdc-top-app-bar__title" id="postTitle">Title</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite"
+            id="likeBtn">favorite</button>
+          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Options">more_vert</button>
+        </section>
+      </div>
+    </header>
+    <main class="sheetContent">
+      <p id="sheetName" class="hidden"></p>
+      <h1 id="sheetTitle" class="hidden">Title...</h1>
+      <h4 id="sheetDescription" class="hidden">Description...</h4>
+      <img id="artImage" src="" alt="art, trick or blog" class="hidden">
+      <p id="sheetContent">content...</p>
+    </main>
+    <footer>
+      <p id="userData">Posted by:</p>
+    </footer>
+  </section>
+
+</body>
+
+</html>

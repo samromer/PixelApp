@@ -1,0 +1,34 @@
+[
+  {
+    "catagory": "art",
+    "name": "Hampter",
+    "title": "Hampter",
+    "src": "images/Hampter.png",
+    "content": "Made this when I was bored",
+    "poster": "pixelman"
+  },
+  {
+    "catagory": "blog",
+    "name": "HowToMakePixelsGreatAgain",
+    "title": "How to make Pixels great again",
+    "description": "This is how we can make Pixels cooler.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid voluptas deleniti iusto, aliquam iure quos tenetur rem ipsam expedita architecto harum praesentium iste debitis ratione, vel obcaecati molestias quasi rerum?",
+    "poster": "pixelman"
+  },
+  {
+    "catagory": "trick",
+    "name": "HowToSafePixels",
+    "title": "How to safe pixels",
+    "description": "How to use less pixels, but still make great art.",
+    "content": "You don't lmao.",
+    "poster": "pixelman"
+  },
+  {
+    "catagory": "art",
+    "name": "ProppellerMan",
+    "title": "Propeller man",
+    "src": "images/PropellerMan.png",
+    "content": "The man, the myth, the legend",
+    "poster": "YachtClubGames"
+  }
+]

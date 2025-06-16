@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="A cooking app by Caseoh himself, now enjoy jummy recipes approved by Caseoh himself">
+  <meta name="msapplication-TileColor" content="#50C878">
+  <meta name="theme-color" content="#50C878">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <title>PixelApp offline</title>
+  <!-- Material.io bestanden (CSS & Font/icons)-->
+  <!-- Uitleg werking componenents: https://material.io/components?platform=web -->
+  <!-- Demo van components:         https://material-components.github.io/material-components-web-catalog/#/ -->
+  <!-- Demo en uitleg icons:        https://fonts.google.com/icons?selected=Material+Icons -->
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+
+  <!-- Material.io bestanden (JS en registratie componenten) -->
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script>const MDCBanner = mdc.banner.MDCBanner; const MDCCheckbox = mdc.checkbox.MDCCheckbox; const MDCChip = mdc.chips.MDCChip; const MDCChipSet = mdc.chips.MDCChipSet; const MDCCircularProgress = mdc.circularProgress.MDCCircularProgress; const MDCDataTable = mdc.dataTable.MDCDataTable; const MDCDialog = mdc.dialog.MDCDialog; const MDCDrawer = mdc.drawer.MDCDrawer; const MDCFloatingLabel = mdc.floatingLabel.MDCFloatingLabel; const MDCFormField = mdc.formField.MDCFormField; const MDCIconButtonToggle = mdc.iconButton.MDCIconButtonToggle; const MDCLineRipple = mdc.lineRipple.MDCLineRipple; const MDCLinearProgress = mdc.linearProgress.MDCLinearProgress; const MDCList = mdc.list.MDCList; const MDCMenu = mdc.menu.MDCMenu; const MDCMenuSurface = mdc.menuSurface.MDCMenuSurface; const MDCNotchedOutline = mdc.notchedOutline.MDCNotchedOutline; const MDCRadio = mdc.radio.MDCRadio; const MDCRipple = mdc.ripple.MDCRipple; const MDCSegmentedButton = mdc.segmentedButton.MDCSegmentedButton; const MDCSelect = mdc.select.MDCSelect; const MDCSlider = mdc.slider.MDCSlider; const MDCSnackbar = mdc.snackbar.MDCSnackbar; const MDCSwitch = mdc.switchControl.MDCSwitch; const MDCTabBar = mdc.tabBar.MDCTabBar; const MDCTextField = mdc.textField.MDCTextField; const MDCTooltip = mdc.tooltip.MDCTooltip; const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;</script>
+
+</head>
+
+<body>
+  <main class="offline">
+    <img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAAAXNSR0IArs4c6QAAA5JJREFUeJzt3bGKXWUUQOEoQZHkAWysVCRNSB98AUlpIZLHsbC3s5O0qdKEtIGUiliJMYSQWgQLJWKi1YUpNjjj5J5/1vH7yt3czcBiw8+dmUuXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP7f3li9QMztYXZn8y3O5uUwezHMfh1mz4fZD8Ps3jC7P8xeDTPO4c3VCwD/nYAhTMAQJmAI84h1NsVHrFUeD7PPhtl3x15kz1xgCBMwhAkYwgQMYZdXL8BufTjMHg6zG8Ps59e8y265wBAmYAgTMIQJGMI8YrGlK8Psy2H26bEX2QsXGMIEDGEChjABQ5hHLFa7NczeGWZ/HHuRIhcYwgQMYQKGMAFDmEesfXkyzK4Ps4+H2d1hdvV865zK28Pso2H2/bEXKXKBIUzAECZgCBMwhHnE2r/fh9mDYTb9h8HPX/Mup/Xuos/NcYEhTMAQJmAIEzCEecTi4PnqBU7Y4htgu+ACQ5iAIUzAECZgCPOIxcFfqxc44a3VC1S4wBAmYAgTMIQJGMI8YnEROSyn5AcFYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhvonFwUX6Fb6/Vy9Q4QJDmIAhTMAQJmAI84jFwXurFzjhz9ULVLjAECZgCBMwhAkYwjxi7d/0Daubw+yTYy9yBr+tXqDCBYYwAUOYgCFMwBDmEWtf3h9mLzbf4vyerV6gwgWGMAFDmIAhTMAQ5hGL1X4ZZj9tvkWUCwxhAoYwAUOYgCHMIxarfTXMXm2+RZQLDGEChjABQ5iAIcwjFlv6eph9sfkWO+ICQ5iAIUzAECZgCPOIxcHLYTb9gfWnw+zRMPtmmH17po34Vy4whAkYwgQMYQKGMI9Y+/JkmH2w+RZsxgWGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUPY5dULcKHdHmZ3Nvjca8Psxw0+N8cFhjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACDrH+smKlsFaeigAAAAAElFTkSuQmCC>
+    <h1>Oh no, You are offline</h1>
+    <p>try connection to the internet</p>
+  </main>
+</body>
+<style>
+  .offline {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow-y: hidden;
+    overflow: hidden;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+</style>
