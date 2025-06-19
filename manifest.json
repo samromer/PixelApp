@@ -19,7 +19,7 @@
     "display": "standalone",
     "dir": "auto",
     "lang": "en-US",
-    "start_url": "PixelApp",
+    "start_url": "",
     "name": "PixelApp",
     "short_name": "Pixels"
 }
